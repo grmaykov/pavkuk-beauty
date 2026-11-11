@@ -117,3 +117,19 @@
 
 /* Distribute desktop contacts across the full content width. */
 @media(min-width:901px){.contact-details{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.contact-details>.contact-call{justify-self:start}.contact-details>.contact-write{justify-self:center;align-items:center}.contact-details>.contact-address{justify-self:end;align-items:flex-end;text-align:right}}
+
+/* Portraits on taped paper cards in the studio's existing style. */
+.about-poster--portrait{width:100%;max-width:400px;min-height:0;padding:16px 16px 20px;justify-self:center;box-shadow:3px 8px 18px #24211f0b}
+.about-poster--portrait .tape{z-index:1}
+.alina-portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 62%;border:8px solid var(--cream)}
+.portrait-sign{display:block;margin-top:16px;font-size:34px;line-height:1.2}
+.about-poster--portrait .experience{margin-top:16px;padding-top:14px;gap:18px}
+.about-poster--portrait .experience strong{font-size:38px}
+.about-poster--portrait .experience strong small{font-size:15px}
+.colleague-card{max-width:840px;grid-template-columns:210px minmax(0,1fr);gap:38px;padding:36px}
+.colleague-portrait{position:relative;margin:0;background:var(--cream);padding:10px 10px 14px;transform:rotate(3deg);box-shadow:2px 5px 12px #24211f15}
+.colleague-portrait>.tape{width:78px;height:23px;left:calc(50% - 39px);top:-12px;transform:rotate(-6deg)}
+.colleague-portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.colleague-portrait figcaption{font-size:23px;line-height:1.2;color:var(--red);text-align:center;margin-top:12px}
+@media(max-width:900px) and (min-width:641px){.about-grid{gap:36px}.portrait-sign{font-size:29px}.colleague-card{grid-template-columns:180px minmax(0,1fr);gap:28px;padding:30px}}
+@media(max-width:640px){.about-poster--portrait{width:86%;max-width:340px;min-height:0;margin:6px 0 0;padding:12px 12px 18px}.alina-portrait{border-width:6px}.portrait-sign{font-size:31px}.colleague-card{grid-template-columns:minmax(0,1fr);gap:30px;padding:34px 23px 27px}.colleague-portrait{width:200px;max-width:80%;justify-self:center}.colleague-portrait figcaption{font-size:23px}}
