@@ -110,3 +110,10 @@
 @media(max-width:900px){.contact-details{grid-template-columns:1fr 1fr;gap:25px 32px}}
 @media(max-width:640px){.contact-details{display:grid;grid-template-columns:1.25fr 1fr;gap:26px 16px}.contact-address,.contact-social{grid-column:1/-1}.contact-details .phone-tools a{font-size:clamp(11px,3.3vw,13px)}.messenger-links{gap:7px}.contact-details .messenger-link{width:37px;height:37px;padding:7px}.messenger-link svg{width:21px;height:21px}.max-contact-help{left:auto;right:-5px;transform:rotate(-1deg);width:260px}}
 @media(max-width:360px){.messenger-links{gap:6px}.contact-details .messenger-link{width:32px;height:32px;padding:5px}.messenger-link svg{width:20px;height:20px}}
+
+/* Instagram in the page footer */
+.footer-actions{display:flex;align-items:center;gap:20px}
+.footer-instagram{display:grid;place-items:center;width:44px;height:44px;flex:none;border:1px solid var(--ink);border-radius:50%;background:var(--pink);color:var(--ink);transition:color .2s,border-color .2s,transform .2s}
+.footer-instagram svg{width:22px;height:22px}
+.footer-instagram:hover{color:var(--red);border-color:var(--red);transform:translateY(-2px)}
+.footer-instagram:focus-visible{outline:2px solid var(--red);outline-offset:4px}
