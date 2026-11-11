@@ -118,18 +118,72 @@
 /* Distribute desktop contacts across the full content width. */
 @media(min-width:901px){.contact-details{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.contact-details>.contact-call{justify-self:start}.contact-details>.contact-write{justify-self:center;align-items:center}.contact-details>.contact-address{justify-self:end;align-items:flex-end;text-align:right}}
 
-/* Portraits on taped paper cards in the studio's existing style. */
-.about-poster--portrait{width:100%;max-width:400px;min-height:0;padding:16px 16px 20px;justify-self:center;box-shadow:3px 8px 18px #24211f0b}
-.about-poster--portrait .tape{z-index:1}
-.alina-portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 62%;border:8px solid var(--cream)}
-.portrait-sign{display:block;margin-top:16px;font-size:34px;line-height:1.2}
-.about-poster--portrait .experience{margin-top:16px;padding-top:14px;gap:18px}
-.about-poster--portrait .experience strong{font-size:38px}
-.about-poster--portrait .experience strong small{font-size:15px}
-.colleague-card{max-width:840px;grid-template-columns:210px minmax(0,1fr);gap:38px;padding:36px}
-.colleague-portrait{position:relative;margin:0;background:var(--cream);padding:10px 10px 14px;transform:rotate(3deg);box-shadow:2px 5px 12px #24211f15}
-.colleague-portrait>.tape{width:78px;height:23px;left:calc(50% - 39px);top:-12px;transform:rotate(-6deg)}
-.colleague-portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-.colleague-portrait figcaption{font-size:23px;line-height:1.2;color:var(--red);text-align:center;margin-top:12px}
-@media(max-width:900px) and (min-width:641px){.about-grid{gap:36px}.portrait-sign{font-size:29px}.colleague-card{grid-template-columns:180px minmax(0,1fr);gap:28px;padding:30px}}
-@media(max-width:640px){.about-poster--portrait{width:86%;max-width:340px;min-height:0;margin:6px 0 0;padding:12px 12px 18px}.alina-portrait{border-width:6px}.portrait-sign{font-size:31px}.colleague-card{grid-template-columns:minmax(0,1fr);gap:30px;padding:34px 23px 27px}.colleague-portrait{width:200px;max-width:80%;justify-self:center}.colleague-portrait figcaption{font-size:23px}}
+/* Separate taped photographs alongside the original studio stickers. */
+.about>.wrap{max-width:1320px;padding-inline:48px}
+.about-grid{grid-template-columns:540px minmax(0,1fr);gap:52px}
+.about-art{position:relative;min-width:0}
+.about-art .about-poster{width:400px;max-width:none;min-height:555px;margin:20px 0 20px 10px;padding:35px 27px 24px}
+.about-art .poster-caption{font-size:11px}
+.about-art .poster-eye{margin-top:38px}
+.about-art .poster-word{font-size:47px}
+.about-art .poster-heart{bottom:132px}
+.about-art .poster-note{font-size:6px;margin-top:22px}
+.about-copy h2{font-size:55px}
+.about-copy .lead{font-size:20px}
+.loose-photo{position:relative;margin:0;padding:9px;background:var(--cream);box-shadow:2px 6px 13px #24211f25;z-index:2}
+.loose-photo img{display:block;width:100%;height:auto;object-fit:cover}
+.photo-tape{position:absolute;z-index:3;top:-12px;left:calc(50% - 43px);width:86px;height:25px;transform:rotate(-7deg);background:#e4dfbdb3}
+.alina-photo{position:absolute;left:342px;top:26px;width:184px;transform:rotate(7deg)}
+.alina-photo img{aspect-ratio:4/5;object-position:center 62%}
+.colleague-wrap{margin-top:78px}
+.colleague-stage{position:relative;width:865px;max-width:100%;margin-inline:auto}
+.colleague-stage .colleague-card{width:720px;max-width:none;margin-inline:0;grid-template-columns:130px minmax(0,1fr);padding:34px 80px 34px 36px;gap:30px}
+.olga-photo{position:absolute;left:666px;top:8px;width:190px;transform:rotate(8deg)}
+.olga-photo img{aspect-ratio:3/4}
+@media(min-width:901px) and (max-width:1199px){
+ .about-grid{grid-template-columns:46% minmax(0,1fr);gap:40px}
+ .about-art .about-poster{width:76%;min-height:500px;padding:32px 22px 22px}
+ .about-art .poster-caption{font-size:9px}.about-art .poster-word{font-size:40px}
+ .alina-photo{left:auto;right:0;width:34%;top:25px}
+ .about-copy h2{font-size:47px}.about-copy .lead{font-size:19px}
+ .colleague-stage{width:calc(100% - 30px)}
+ .colleague-stage .colleague-card{width:83%;grid-template-columns:100px minmax(0,1fr);padding-right:70px;gap:25px}
+ .olga-photo{left:auto;right:0;width:22%}
+}
+@media(min-width:641px) and (max-width:900px){
+ .about>.wrap{padding-inline:36px}.about-grid{grid-template-columns:1fr;gap:46px}
+ .about-art{width:540px;max-width:100%;margin-inline:auto}
+ .about-copy{width:100%;max-width:620px;margin-inline:auto}
+ .colleague-stage{width:100%;padding-top:25px}
+ .colleague-stage .colleague-card{width:84%;grid-template-columns:1fr;padding:30px 75px 30px 28px;gap:20px}
+ .colleague-flower{flex-direction:row;justify-content:flex-start;gap:15px}
+ .colleague-flower svg{width:38px;height:38px}
+ .colleague-flower .hand{font-size:22px}
+ .olga-photo{left:auto;right:0;top:0;width:24%}
+ .colleague-copy h3{font-size:36px}
+}
+@media(max-width:640px){
+ .about>.wrap{padding-inline:23px}.about-grid{display:flex;flex-direction:column;gap:45px}
+ .about-art{width:100%;max-width:380px;margin-inline:auto}
+ .about-art .about-poster{width:75%;min-height:430px;margin:20px 0 0 3px;padding:28px 18px 18px}
+ .about-art .poster-caption{font-size:8px}
+ .about-art .poster-eye{width:66%;margin-top:35px;margin-bottom:22px}
+ .about-art .poster-word{font-size:35px}
+ .about-art .poster-heart{right:18px;bottom:124px;width:26px;height:26px}
+ .about-art .experience{gap:13px;margin-top:25px;padding-top:15px}
+ .about-art .experience strong{font-size:38px}
+ .about-art .experience strong small{font-size:15px}
+ .about-art .experience span{font-size:9px}
+ .about-art .poster-note{font-size:5px;letter-spacing:.3px;margin-top:22px}
+ .loose-photo{padding:6px}.photo-tape{width:64px;height:20px;left:calc(50% - 32px);top:-9px}
+ .alina-photo{left:auto;right:5px;top:32px;width:37%;transform:rotate(6deg)}
+ .about-copy h2{font-size:47px}
+ .colleague-wrap{margin-top:45px}
+ .colleague-stage{width:100%;padding-top:105px}
+ .colleague-stage .colleague-card{width:100%;max-width:100%;grid-template-columns:1fr;gap:24px;padding:32px 22px 27px}
+ .colleague-stage .colleague-flower{width:51%;min-height:48px;gap:11px}
+ .colleague-stage .colleague-flower .hand{font-size:19px}
+ .colleague-stage .colleague-flower svg{width:30px;height:30px}
+ .olga-photo{left:auto;right:10px;top:0;width:39%;max-width:145px;transform:rotate(7deg)}
+ .colleague-stage .colleague-tape{left:25px;width:92px}
+}
