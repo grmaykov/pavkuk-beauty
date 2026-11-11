@@ -114,3 +114,6 @@
 
 /* Keep the free consultation note together on phones. */
 @media(max-width:640px){.consult-note{gap:10px;transform:rotate(-4deg)}.consult-note>svg{width:28px;height:28px;flex:none}.consult-note .hand{font-size:clamp(14px,4.6vw,22px);line-height:1.3;white-space:nowrap}.consult-note .hand br{display:none}}
+
+/* Distribute desktop contacts across the full content width. */
+@media(min-width:901px){.contact-details{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.contact-details>.contact-call{justify-self:start}.contact-details>.contact-write{justify-self:center;align-items:center}.contact-details>.contact-address{justify-self:end;align-items:flex-end;text-align:right}}
