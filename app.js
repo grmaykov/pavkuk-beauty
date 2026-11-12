@@ -64,9 +64,9 @@ function showPhoto(index) {
   viewerImage.alt = img.alt;
   viewerMedia.style.setProperty('--photo-ratio', link.dataset.ratio);
   viewerMedia.classList.toggle('rotate-90', link.dataset.rotate === '90');
-  document.querySelector('#viewer-title').textContent = card.querySelector('.photo-title').textContent;
+  document.querySelector('#viewer-title').textContent = card.querySelector('.photo-title')?.textContent || '';
   document.querySelector('#viewer-counter').textContent = `${currentPhoto + 1} / ${matching.length}`;
-  document.querySelector('#viewer-detail').textContent = card.querySelector('figcaption small').textContent;
+  document.querySelector('#viewer-detail').textContent = card.querySelector('figcaption small')?.textContent || '';
 }
 document.querySelectorAll('[data-photo]').forEach(link => link.addEventListener('click', e => {
   if(e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
