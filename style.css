@@ -187,15 +187,3 @@
  .olga-photo{left:auto;right:10px;top:0;width:39%;max-width:145px;transform:rotate(7deg)}
  .colleague-stage .colleague-tape{left:25px;width:92px}
 }
-
-/* Compact, wider pink introduction sticker on phones. */
-@media(max-width:640px){
- .about-art .about-poster{width:92%;min-height:0;margin:20px 0 0 3px;padding:24px 18px 20px}
- .about-art .poster-caption{width:62%;font-size:8px}
- .about-art .poster-eye{width:51%;height:86px;margin:20px 0 16px}
- .about-art .poster-word{font-size:32px;line-height:1.08;margin-top:20px}
- .about-art .experience{margin-top:18px;padding-top:13px}
- .about-art .poster-note{margin-top:16px;font-size:6px;letter-spacing:.2px}
- .about-art .poster-heart{right:16px;bottom:113px;width:24px;height:24px}
- .alina-photo{right:0;top:32px;width:35%}
-}
